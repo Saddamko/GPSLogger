@@ -92,11 +92,12 @@ void setup()
  Serial.println("");
  Serial.print("Library version: ");
  Serial.println(TinyGPSPlus::libraryVersion());
-// Serial.println("K - Send to PC in KML format");
-// Serial.println("D - HEX dump of EEPROM memory");
-// Serial.println("E - Erase EEPROM data");
-// Serial.println("R - Start recording of GPS data");
-// Serial.println("G - Send to PC in GPX format");
+ Serial.println("P - Send to PC");
+ Serial.println("K - Send to PC in KML format");
+ Serial.println("D - HEX dump of EEPROM memory");
+ Serial.println("E - Erase EEPROM data");
+ Serial.println("R - Start recording of GPS data");
+ Serial.println("G - Send to PC in GPX format");
 }
 
 void loop()
@@ -205,7 +206,7 @@ void do_menu()
     }
   
     if (temp1 != menu_none) {
-    Serial.print("Command is completed");
+    Serial.println("Command is completed");
     command = menu_none;
   }
 }
